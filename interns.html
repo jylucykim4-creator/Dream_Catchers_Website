@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intern Application | Your Brand</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f8f7f1;
+      color: #17392e;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #f8f7f1;
+      border-bottom: 1px solid #d5ddd0;
+    }
+
+    .navigation {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: #17392e;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    nav a {
+      padding: 10px 16px;
+      border-radius: 30px;
+      color: #17392e;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: #e6ebdf;
+    }
+
+    nav a[aria-current="page"] {
+      background: #17392e;
+      color: white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+      min-height: 80vh;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 20px 0;
+    }
+
+    .intro {
+      max-width: 600px;
+      color: #50675b;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+
+    .application-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    .note {
+      color: #50675b;
+      font-size: 14px;
+    }
+
+    form {
+      background: white;
+      border: 1px solid #d5ddd0;
+      border-radius: 20px;
+      padding: 32px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 18px;
+    }
+
+    input,
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+      padding: 13px;
+      border: 1px solid #9eafa1;
+      border-radius: 8px;
+      background: white;
+      color: #17392e;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 24px;
+      padding: 14px 24px;
+      background: #17392e;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font: inherit;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2d5845;
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    :focus-visible {
+      outline: 3px solid #397341;
+      outline-offset: 4px;
+    }
+
+    #status {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 25px 20px;
+      text-align: center;
+      border-top: 1px solid #d5ddd0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .navigation {
+        flex-direction: column;
+      }
+
+      .application-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      main {
+        padding-top: 40px;
+      }
+
+      form {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="navigation">
+      <!-- Replace "Your Brand" with your website name. -->
+      <a href="index.html" class="brand">Your Brand ✳</a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home / About</a>
+        <a href="interns.html" aria-current="page">
+          Intern Application
+        </a>
+        <a href="customers.html">Customers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p class="eyebrow">Your next chapter</p>
+    <h1>Bring your curiosity.</h1>
+
+    <p class="intro">
+      Interested in joining Your Brand?
+      Tell us about yourself, your interests, and what you
+      would like to learn.
+    </p>
+
+    <div class="application-layout">
+      <aside>
+        <h2>Start here.</h2>
+
+        <!-- Replace this with your actual internship details. -->
+        <p>
+          Add information here about your internship opportunities,
+          available roles, location, compensation, and deadlines.
+        </p>
+
+        <p class="note">
+          Fields marked * are required.
+          A résumé or portfolio link is optional.
+        </p>
+      </aside>
+
+      <form id="application-form">
+        <p id="form-note" class="note">
+          Preview mode: applications are not being sent yet.
+        </p>
+
+        <label for="name">Full name *</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          maxlength="120"
+          required
+        >
+
+        <label for="email">Email address *</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          maxlength="254"
+          required
+        >
+
+        <label for="school">School / university</label>
+        <input
+          id="school"
+          name="school"
+          type="text"
+          maxlength="200"
+        >
+
+        <label for="interest">Area of interest *</label>
+        <select id="interest" name="interest" required>
+          <option value="">Choose an area</option>
+          <option>Business & Operations</option>
+          <option>Marketing & Communications</option>
+          <option>Design</option>
+          <option>Technology & Engineering</option>
+          <option>Other</option>
+        </select>
+
+        <label for="portfolio">Résumé / portfolio link</label>
+        <input
+          id="portfolio"
+          name="portfolio"
+          type="url"
+          placeholder="https://"
+          maxlength="2000"
+        >
+
+        <label for="motivation">
+          Why would you like to join us? *
+        </label>
+        <textarea
+          id="motivation"
+          name="motivation"
+          placeholder="Tell us about your interests and goals."
+          maxlength="4000"
+          required
+        ></textarea>
+
+        <button id="submit-button" type="submit" disabled>
+          Preview application
+        </button>
+
+        <p id="status" role="status" aria-live="polite"></p>
+
+        <noscript>
+          JavaScript must be enabled to use this form.
+        </noscript>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Your Brand
+  </footer>
+
+  <script>
+    /*
+      To receive applications, paste your form service's
+      HTTPS submission endpoint between the quotation marks.
+
+      Leave empty for preview mode.
+      Never put passwords or secret API keys here.
+    */
+    const FORM_ENDPOINT = "";
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const form = document.getElementById("application-form");
+    const button = document.getElementById("submit-button");
+    const status = document.getElementById("status");
+
+    if (FORM_ENDPOINT) {
+      document.getElementById("form-note").textContent =
+        "Your application will be sent through our form provider.";
+      button.textContent = "Submit application";
+    }
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      if (!FORM_ENDPOINT) {
+        status.textContent =
+          "Preview complete! Nothing was sent or saved. " +
+          "Connect a form service to receive applications.";
+        return;
+      }
+
+      button.disabled = true;
+      status.textContent = "Sending your application…";
+
+      try {
+        const response = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          body: new FormData(form),
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error("Submission failed");
+        }
+
+        status.textContent =
+          "Thank you! Your application has been submitted.";
+        form.reset();
+      } catch (error) {
+        status.textContent =
+          "We could not confirm your submission. " +
+          "Your entries are still here. Please try again.";
+      } finally {
+        button.disabled = false;
+      }
+    });
+
+    button.disabled = false;
+  </script>
+</body>
+</html>
