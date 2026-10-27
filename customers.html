@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customers | Your Brand</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 140px;
+    }
+
+    body {
+      margin: 0;
+      background: #f8f7f1;
+      color: #17392e;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #f8f7f1;
+      border-bottom: 1px solid #d5ddd0;
+    }
+
+    .navigation {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: #17392e;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    nav a {
+      padding: 10px 16px;
+      border-radius: 30px;
+      color: #17392e;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: #e6ebdf;
+    }
+
+    nav a[aria-current="page"] {
+      background: #17392e;
+      color: white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+      min-height: 80vh;
+    }
+
+    .hero {
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 20px 0;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.2;
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 23px;
+    }
+
+    .intro {
+      max-width: 600px;
+      color: #50675b;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      background: #17392e;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #2d5845;
+    }
+
+    .section {
+      padding: 70px 0;
+      border-top: 1px solid #d5ddd0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 35px;
+    }
+
+    .card {
+      padding: 30px;
+      border: 1px solid #d5ddd0;
+      border-radius: 20px;
+      background: white;
+    }
+
+    .number {
+      font-size: 14px;
+      font-weight: bold;
+      color: #50675b;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    details {
+      padding: 20px 0;
+      border-bottom: 1px solid #d5ddd0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    details p {
+      color: #50675b;
+      max-width: 700px;
+    }
+
+    .callout {
+      padding: 45px;
+      border-radius: 24px;
+      background: #17392e;
+      color: white;
+    }
+
+    .callout .button {
+      background: #dbf390;
+      color: #17392e;
+    }
+
+    :focus-visible {
+      outline: 3px solid #397341;
+      outline-offset: 4px;
+    }
+
+    footer {
+      padding: 25px 20px;
+      text-align: center;
+      border-top: 1px solid #d5ddd0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .navigation {
+        flex-direction: column;
+      }
+
+      .cards,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 50px 0;
+      }
+
+      .section {
+        padding: 45px 0;
+      }
+
+      .callout {
+        padding: 28px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="navigation">
+      <!-- Replace Your Brand with your website name. -->
+      <a href="index.html" class="brand">Your Brand ✳</a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home / About</a>
+        <a href="interns.html">Intern Application</a>
+        <a href="customers.html" aria-current="page">
+          Customers
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">For our customers</p>
+
+      <h1>Find what works<br>for you.</h1>
+
+      <p class="intro">
+        Discover what Your Brand has to offer.
+        Replace this introduction with a short description
+        of your products or services and who they are for.
+      </p>
+
+      <a href="#services" class="button">
+        Explore our offerings ↓
+      </a>
+    </section>
+
+    <section id="services" class="section">
+      <p class="eyebrow">What we offer</p>
+      <h2>Explore the possibilities.</h2>
+
+      <!-- Replace these cards with your actual offerings. -->
+      <div class="cards">
+        <article class="card">
+          <span class="number">01 /</span>
+          <h3>Your first offering</h3>
+          <p>
+            Describe your first product or service.
+            Explain what it includes and how it helps customers.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="number">02 /</span>
+          <h3>Your second offering</h3>
+          <p>
+            Describe another product or service.
+            Include the details customers need to understand it.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="number">03 /</span>
+          <h3>Your third offering</h3>
+          <p>
+            Introduce an additional option or explain how
+            customers can choose the right service for them.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Getting started</p>
+        <h2>Your next step.</h2>
+      </div>
+
+      <div>
+        <h3>How to work with us</h3>
+        <p>
+          Replace this paragraph with your process.
+          Explain how customers can inquire, book, or order.
+        </p>
+
+        <p>
+          Add your business contact details or booking link here
+          when you are ready to receive requests.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Common questions</p>
+      <h2>A few things to know.</h2>
+
+      <!-- Click each question to expand its answer. -->
+      <details>
+        <summary>What does Your Brand offer?</summary>
+        <p>
+          Replace this answer with a summary of your
+          products or services.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I get started?</summary>
+        <p>
+          Add your contact method, booking instructions,
+          or ordering process here.
+        </p>
+      </details>
+
+      <details>
+        <summary>Where can I find pricing?</summary>
+        <p>
+          Add your pricing information or explain how
+          customers can request a quote.
+        </p>
+      </details>
+    </section>
+
+    <section class="section">
+      <div class="callout">
+        <p class="eyebrow">Our story</p>
+        <h2>Get to know Your Brand.</h2>
+        <p>
+          Visit our information page to learn more about
+          our purpose and the people behind the idea.
+        </p>
+
+        <a href="index.html" class="button">
+          About us ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Your Brand
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
